@@ -9,16 +9,19 @@
     "front:build": "yarn workspace @aunited/dashboard build"
   },
   "workspaces": [
-    "frontend/*", "frontend/ui/*", "frontend/utils/*"
+    "frontend/*",
+    "frontend/ui/*",
+    "frontend/utils/*"
   ],
   "devDependencies": {
+    "husky": "^2.4.1",
     "lerna": "3.15.0",
     "tslint": "^5.17.0",
-    "husky": "^2.4.1"
+    "typescript": "^4.0.3"
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint && yarn run typecheck"
+      "pre-push": "yarn lint && yarn typecheck"
     }
   }
 }
